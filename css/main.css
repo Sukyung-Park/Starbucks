@@ -1,5 +1,5 @@
 /* COMMON */
-body{
+body {
   /* 진회색 느낌 */
   color: #333;
   font-size: 16px;
@@ -7,22 +7,22 @@ body{
   font-weight: 400;
   /* 행 간 1.4배의 줄 높이 */
   line-height: 1.4;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
 }
 /* 이미지는 이너 글자처럼 취급했는데, block으로 함으로써 하나의 상자(레이아웃)으로 취급하겠다.  */
 img {
   display: block;
 }
 /* a태그 밑줄 사용하지 않겠다. */
-a{
+a {
   text-decoration: none;
 }
- .inner {
+.inner {
   width: 1100px;
   margin: 0 auto;
   position: relative;
 }
- .btn {
+.btn {
   width: 130px;
   padding: 10px;
   border: 2px solid #333;
@@ -34,48 +34,48 @@ a{
   cursor: pointer;
   box-sizing: border-box;
   display: block;
-  transition: .4s;
- }
- .btn:hover{
+  transition: 0.4s;
+}
+.btn:hover {
   background-color: #333;
   color: #fff;
 }
- .btn .btn--reverse {
+.btn.btn--reverse {
   background-color: #333;
   color: #fff;
 }
- .btn .btn--reverse:hover {
+.btn.btn--reverse:hover {
   /* 투명한 색상 transparent */
   background-color: transparent;
   color: #333;
 }
- .btn .btn--brown {
-  color: #592B18;
-  border-color: #592B18;
+.btn.btn--brown {
+  color: #592b18;
+  border-color: #592b18;
 }
- .btn .btn--brown:hover {
-  color: #FFF;
-  border-color: #592B18;
-}
-.btn .btn--gold {
-  color: #D9AA8A;
-  border-color: #D9AA8A;
-}
-.btn .btn--gold:hover {
+.btn.btn--brown:hover {
   color: #fff;
-  border-color: #D9AA8A;
+  border-color: #592b18;
 }
-.btn .btn--white {
+.btn.btn--gold {
+  color: #d9aa8a;
+  border-color: #d9aa8a;
+}
+.btn.btn--gold:hover {
   color: #fff;
-  border-color: #FFF;
+  border-color: #d9aa8a;
 }
-.btn .btn--white:hover {
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+.btn.btn--white:hover {
   color: #333;
-  border-color: #FFF;
+  border-color: #fff;
 }
 
 /* HEADER */
-header{
+header {
   width: 100%;
   background-color: #f6f5f0;
   /* 아래쪽에 있는 테두리선 한줄 */
@@ -84,13 +84,13 @@ header{
   top: 0;
   z-index: 9;
 }
-header > .inner{
+header > .inner {
   height: 120px;
 }
 header .logo {
   height: 75px;
   /* 부모요소 기준으로 배치하겠다. */
-  position: absolute; 
+  position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -117,9 +117,9 @@ header .sub-menu ul.menu li::before {
   height: 12px;
   background-color: #e5e5e5;
   /* absolute나 pixed로 바꾸면 블럭요소로 바뀌기때문에 block요소 지워줘도됨 */
-  position: absolute;   
+  position: absolute;
   top: 0;
-  bottom : 0;
+  bottom: 0;
   margin: auto;
 }
 /* 첫번째 sign in 앞에 있는 구분선을 사라지게 하기위해 */
@@ -139,11 +139,11 @@ header .sub-menu ul.menu li a:hover {
   color: #000;
 }
 
-header .sub-menu .search{
+header .sub-menu .search {
   height: 34px;
   position: relative;
 }
-header .sub-menu .search input{
+header .sub-menu .search input {
   width: 36px;
   height: 34px;
   padding: 4px 10px;
@@ -155,30 +155,29 @@ header .sub-menu .search input{
   color: #777;
   font-size: 12px;
   /* 가로효과만 전환효과주기 */
-  transition: width .4s;
+  transition: width 0.4s;
 }
 /* input요소가 포커스되면 */
-header .sub-menu .search input:focus{
+header .sub-menu .search input:focus {
   width: 190px;
   border-color: #669900;
 }
-header .sub-menu .search .material-icons{
+header .sub-menu .search .material-icons {
   height: 24px;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 5px;
   margin: auto;
-  transition: .4s;
+  transition: 0.4s;
 }
 /* 포커스가 된 상태에선 아이콘이 안보이게 하기 */
-header .sub-menu .search.focused .material-icons{
+header .sub-menu .search.focused .material-icons {
   opacity: 0;
-
 }
 
 header .main-menu {
-  position: absolute;  
+  position: absolute;
   bottom: 0;
   right: 0;
   /* 쌓임 순서를 둔 것. 아래 배너가 가려질 수 있도록 */
@@ -186,7 +185,6 @@ header .main-menu {
   display: flex;
 }
 header .main-menu .item {
-
 }
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
@@ -204,7 +202,6 @@ header .main-menu .item .item__contents {
   position: fixed;
   left: 0;
   display: none;
-  
 }
 header .main-menu .item:hover .item__contents {
   display: block;
@@ -216,24 +213,23 @@ header .main-menu .item .item__contents .contents__menu {
 header .main-menu .item .item__contents .contents__menu > ul {
   display: flex;
   padding: 20px 0;
-
 }
-header .main-menu .item .item__contents .contents__menu > ul > li{
+header .main-menu .item .item__contents .contents__menu > ul > li {
   width: 220px;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li h4{
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
   padding: 3px 0 12px 0;
   font-size: 14px;
   color: #fff;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li{
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
   font-size: 12px;
   color: #999;
   /* 손가락 모양으로 만들어줌 */
   cursor: pointer;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover{
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   color: #669900;
 }
 header .main-menu .item .item__contents .contents__texture {
@@ -245,8 +241,8 @@ header .main-menu .item .item__contents .contents__texture h4 {
   color: #999;
   font-weight: 700;
 }
-header .main-menu .item .item__contents .contents__texture p{
-  color:#669900;
+header .main-menu .item .item__contents .contents__texture p {
+  color: #669900;
   margin: 4px 0 14px;
 }
 /* 부모가 header이므로 header에 포지션값이 있는지 확인하기 */
@@ -261,26 +257,26 @@ header .badges .badge {
   overflow: hidden;
   margin-bottom: 12px;
   /* 마지막.15는 투명도임 */
-  box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   /* 손가락 모양으로 바뀌게 저장 */
   cursor: pointer;
 }
 
 /* VISUAL */
-.visual{
+.visual {
   margin-top: 120px;
   background-image: url("../images/visual_bg.jpg");
   background-position: center;
 }
-.visual .inner{
- height: 646px; 
+.visual .inner {
+  height: 646px;
 }
-.visual .title{
+.visual .title {
   position: absolute;
   top: 88px;
   left: -10px;
 }
-.visual .title .btn{
+.visual .title .btn {
   position: absolute;
   top: 259px;
   left: 173px;
@@ -310,13 +306,12 @@ header .badges .badge {
   bottom: 0;
   left: 275px;
 }
-.visual .fade-in{
+.visual .fade-in {
   opacity: 0;
 }
 
 /* NOTICE */
-.notice{
-
+.notice {
 }
 .notice .notice-Line {
   position: relative;
@@ -377,10 +372,9 @@ header .badges .badge {
   /* 수직가운데 */
   align-items: center;
 }
-.notice .notice-Line .inner__left .notice-Line__more .material-icons{
+.notice .notice-Line .inner__left .notice-Line__more .material-icons {
   color: #fff;
   font-size: 30px;
-
 }
 .notice .notice-Line .inner__right {
   width: 40%;
@@ -390,7 +384,7 @@ header .badges .badge {
   justify-content: flex-end;
   align-items: center;
 }
-.notice .notice-Line .inner__right h2{
+.notice .notice-Line .inner__right h2 {
   font-size: 17px;
   font-weight: 700;
 }
@@ -409,7 +403,7 @@ header .badges .badge {
   height: 693px;
   background-color: #f6f5ef;
   position: relative;
-  transition: height .4s;
+  transition: height 0.4s;
   overflow: hidden;
 }
 .notice .promotion.hide {
@@ -424,18 +418,18 @@ header .badges .badge {
   /* 가로넓이 절반값을 입력했음 */
   /* margin-left: clac((819px*3+20px)/-2); */
   /* margin-left: -1238.5px; */
-  margin-left: calc((819px*3 + 20px) / -2);
+  margin-left: calc((819px * 3 + 20px) / -2);
 }
 .notice .promotion .swiper-slide {
   /* 반투명하게 만들어주기 */
-  opacity: .5;
+  opacity: 0.5;
   transition: opacity 1s;
   position: relative;
 }
 .notice .promotion .swiper-slide-active {
   opacity: 1;
 }
-.notice .promotion .swiper-container .btn{
+.notice .promotion .swiper-container .btn {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -459,7 +453,7 @@ header .badges .badge {
 .notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
-.notice .promotion .swiper-pagination .swiper-pagination-bullet-active{
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
   background-image: url("../images/promotion_slide_pager_on.png");
 }
 .notice .promotion .swiper-prev,
@@ -476,13 +470,13 @@ header .badges .badge {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .4s;
+  transition: 0.4s;
 }
-.notice .promotion .swiper-prev{
+.notice .promotion .swiper-prev {
   left: 50%;
   margin-left: -480px;
 }
-.notice .promotion .swiper-next{
+.notice .promotion .swiper-next {
   right: 50%;
   margin-right: -480px;
 }
@@ -496,7 +490,7 @@ header .badges .badge {
 .rewards {
   position: relative;
 }
-.rewards .bg-left{
+.rewards .bg-left {
   width: 50%;
   height: 100%;
   background-color: #272727;
@@ -504,7 +498,7 @@ header .badges .badge {
   top: 0;
   left: 0;
 }
-.rewards .bg-right{
+.rewards .bg-right {
   width: 50%;
   height: 100%;
   background-color: #d5c798;
@@ -512,11 +506,11 @@ header .badges .badge {
   top: 0;
   right: 0;
 }
-.rewards .inner{
+.rewards .inner {
   background-image: url("../images/rewards.jpg");
   height: 241px;
 }
-.rewards .btn-group{
+.rewards .btn-group {
   position: absolute;
   bottom: 24px;
   right: 0;
@@ -551,7 +545,7 @@ header .badges .badge {
   left: 50%;
   margin-left: calc(1920px / -2);
   top: 50%;
-  margin-top: calc(1920px * 9 / 16 / -2); 
+  margin-top: calc(1920px * 9 / 16 / -2);
 }
 /* 가상요소 선택자 */
 .youtube .youtube__area::before {
@@ -560,11 +554,11 @@ header .badges .badge {
   width: 100%;
   height: 0;
   /* 56.25%는 16:9의 비율임 */
-  padding-top: 56.25%; 
+  padding-top: 56.25%;
 }
 .youtube .youtube__cover {
   background-image: url("../images/video_cover_pattern.png");
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -591,11 +585,6 @@ header .badges .badge {
   top: 350px;
   left: 150;
 }
-.youtube .floating3 {
-  position: absolute;
-  bottom: -200px;
-  right: 0;
-}
 
 /* SEANSON PRODUCT */
 .season-product {
@@ -609,12 +598,105 @@ header .badges .badge {
   top: 110px;
   right: 100px;
 }
+.season-product .floating3 {
+  position: absolute;
+  top: -200px;
+  right: 0;
+}
 .season-product .text-group .title {
-
+  margin-bottom: 10px;
 }
 .season-product .text-group .description {
-  
+  margin-bottom: 15px;
 }
 .season-product .text-group .more {
-  
+}
+
+/* RESEVE COFFEE */
+.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
+}
+.reserve-coffee .inner {
+  height: 400px;
+}
+.reserve-coffee .reserve-logo {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.reserve-coffee .text-group {
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+.reserve-coffee .product {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite {
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.pick-your-favorite .inner {
+  padding: 110px 0;
+}
+.pick-your-favorite .text-group {
+  margin-left: 100px;
+  display: flex;
+  width: 362px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.pick-your-favorite .text-group .title {
+  margin-bottom: 40px;
+}
+.pick-your-favorite .text-group .description {
+  margin-bottom: 40px;
+}
+
+/* RESERVE STORE */
+.reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.reserve-store .inner {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve-store .medal {
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+  /* 원근법 추가 */
+}
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+  transition: 1s;
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+}
+.reserve-store .medal .front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+.reserve-store .medal .back {
+  transform: rotateY(-180deg);
+}
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
 }
