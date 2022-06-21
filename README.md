@@ -4,3 +4,4 @@
 starbucks homepage publishing
 ![image](https://user-images.githubusercontent.com/104730729/174858707-7963deff-17b7-4e2c-9022-3853a975f38e.png)
 입체감 디테일을 살린 퍼블리싱 
+Scroll Magic 라이브러리 사용
