@@ -19,6 +19,7 @@ searchInputEl.addEventListener("blur", function () {
 });
 
 const badgeEl = document.querySelector("header .badges");
+const toTopEl = document.querySelector("to-top");
 // 스크롤하게되면 '스크롤!'문자표가 출력됨
 
 // 0.3초 단위로 부하를 줘서 함수가 우르르 실행되는 것을 방지
@@ -38,6 +39,10 @@ window.addEventListener(
         // 화면이 진짜로 사라지게해주려면 display값을 추가해줘야함
         display: "none",
       });
+      // 버튼 보이기
+      gsap.to(toTopEl, 0.2, {
+        x: 0,
+      });
     } else {
       // 배지보이기
       // badgeEl.style.display = 'block';
@@ -45,10 +50,20 @@ window.addEventListener(
         opacity: 1,
         display: "block",
       });
+      // 버튼 숨기기!
+      gsap.to(toTopEl, 0.2, {
+        x: 100,
+      });
     }
   }, 300)
 );
 // //_.throttle(함수 , 시간)
+
+toTopEl.addEventListener("click", function () {
+  gsap.to(window, 0.7, {
+    scrollTo: 0,
+  });
+});
 
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 // function 함수안에 요소를 적고 반복되는 횟수를 index로 적는다.
