@@ -7,4 +7,4 @@ starbucks homepage publishing
 <br />
 Scroll Magic 라이브러리 사용
 
-로그인부분 구현
+로그인페이지 개발
